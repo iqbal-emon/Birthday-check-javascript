@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first{
+            margin:100px;
+            
+            /* background-color:aqua; */
+        }
+    </style>
+</head>
+<body>
+    <div class="first">
+        <label >current date:</label>
+    <input type="date" id="date1">
+    <label >Birth date:
+    </label>
+    <input type="date" id="date2">
+    <button id="btn">Check</button>
+    <div id='container'></div>
+			<ol id="list">
+
+			</ol>
+		</div>
+    <script type="text/javascript">
+
+		let date1= document.querySelector("#date1");
+		let btn= document.querySelector("#btn");
+
+		let date2= document.querySelector("#date2");
+
+		let list= document.querySelector("#list");
+		
+				btn.addEventListener('click', ()=>{
+					let dat1= date1.value.split("-");
+                
+                    let dat2=date2.value.split("-");
+                    let date=dat2[0]-dat1[0];
+					list.innerHTML=  list.innerHTML+ "<li>"+date+"</li>"
+				});
+		
+		
+
+	</script>
+</body>
+</html>
